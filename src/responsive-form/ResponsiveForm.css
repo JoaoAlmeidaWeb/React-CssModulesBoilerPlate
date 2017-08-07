@@ -1,0 +1,95 @@
+.boxBorder{
+    padding:5px;
+    border:2px solid #ccc;
+    border-radius: 5px;
+}
+
+.mainForm{
+    width: 80vh;
+}
+
+.mainForm footer{
+    display: flex;
+    margin-top: 20px;
+}
+
+/* :global is a syntax used  in CSS Modules*/
+.mainForm :global .checkboxContainer{
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.formContainer{
+    display:flex;
+}
+
+.formContainer textarea{
+    width: 45vh;
+    height: calc(100% - 30px);
+}
+
+.inputFields{
+    flex : 1;
+}
+
+.inputFields :global .bottomMargin{
+    margin-bottom: 15px;
+}
+
+.submitButton{
+    border-radius: 7px;
+    background: white;
+    border: 1px solid #E56A24;
+    padding: 15px;
+    color: #E56A24;
+    font-weight: 700;
+    margin-right: 2vh;
+}  
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .mainForm{
+        width: 100%;
+    }
+    .formContainer{
+        flex-direction: column;
+    }
+
+    .formContainer input{
+        width: 90%;
+    }
+    .formContainer textarea{
+        width: 90%;
+        height: 20vh;
+    }
+    .mainForm footer{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .submitButton{
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mainForm{
+        width: 90%;
+    }
+    .formContainer{
+        flex-direction: column;
+    }
+
+    .formContainer input{
+        width: 100%;
+    }
+    .formContainer textarea{
+        width: 100%;
+        height: 20vh;
+    }
+    .mainForm footer{
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .submitButton{
+        width: 90%;
+    }
+}
